@@ -73,8 +73,8 @@ padding-right: 15px;
 margin-left: auto;
 margin-right: auto;
 
-outline: 2px solid red;
-outline-offset: -2px;
+/* outline: 2px solid red;
+outline-offset: -2px; */
 }
 
 
@@ -225,11 +225,6 @@ padding-top: 120px;
 padding-bottom: 120px;
 }
 
-.advantages-list {
-display: flex;
-justify-content: center;
-gap: 24px;
-}
 
 .advantages-item {
 display: flex;
@@ -237,6 +232,7 @@ align-items: center;
 justify-content: center;
 width: 264px;
 height: 112px;
+margin-bottom: 8px;
 
 background-color: var(--light);
 border-radius: 4px;
@@ -264,7 +260,9 @@ color: var(--dark);
 .section-text {
 line-height: 1.5;
 letter-spacing: 0.02em;
+color: var(--text);
 }
+
 
 /* ------------------------------------------ */
 /*  What are we doing styles*/
@@ -316,7 +314,7 @@ text-align: center;
 }
 
 .team-position {
-margin-bottom: 20px;
+margin-bottom: 8px;
 }
 
 .team-item {
@@ -359,16 +357,14 @@ background-color: var(--pressed-state);
 .customers-list {
 display: flex;
 justify-content: space-between;
-
-
 }
 
-.customers-item {
+.customers-link {
 display: flex;
 align-items: center;
 justify-content: center;
-max-width: 168px;
-max-height: 88px;
+width: 168px;
+height: 88px;
 border: 1px solid #8E8F99;
 border-radius: 4px;
 }
@@ -380,10 +376,13 @@ fill: var(--subtle-text);
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
 fill: var(--pressed-state);
+
 }
 
-
-
+.customers-link:hover,
+.customers-link:focus {
+border: 1px solid var(--pressed-state);
+}
 
 /* ------------------------------------ */
 /* Filters */
@@ -471,7 +470,9 @@ background-color: var(--dark);
 
 .footer-items {
 display: flex;
-gap: 120px;
+}
+.footer-wrapper {
+margin-right: 120px; 
 }
 
 .footer-logo {
